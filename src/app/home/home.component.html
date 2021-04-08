@@ -1,0 +1,13 @@
+<div class="container my-5">
+
+    <div class="faceWebView" class="position-relative container py-5 text-center" fxShow.lt-md="false" fxShow.gt-sm="true">
+        <img [src]="faceImg" height="500" class="face position-relative" (click)="openResume()"/>
+        <img class="clickMe position-absolute" [src]="clickMe" height="200" style="left:60%"/>  
+    </div>       
+
+    <div class="faceMobileView" class="position-relative container py-5 text-center" fxShow.lt-md="true" fxShow.gt-sm="false">
+        <img [src]="faceImg" height="350" class="face position-relative" (click)="openResume()"/>
+        <img class="clickMe position-absolute" [src]="clickMe" height="140" style="left:60%"/>  
+    </div>     
+
+</div>

@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Bangers&family=Bowlby+One&family=Bowlby+One+SC&family=Bungee&family=Chango&family=Chewy&family=Lilita+One&family=Notable&family=Racing+Sans+One&family=Reenie+Beanie&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+<div class="top" style="position:relative; top: 0; width:100%">
+    <div class="header">
+        <div class="container h-100" style="display:flex; align-items: center; ">   
+            <div class="row w-100">
+                <div class="col-6">
+                    <span style="text-shadow: 0 1px 2px rgba(0,0,0,0.3);font-family: Bungee; font-size:30px; cursor:pointer; white-space: nowrap;">Rhosung Park</span>
+                </div>
+                <div class="col-6 my-auto" style="text-align: right;">
+                    <img [src]="hamburgerUrl" style="height:25px; cursor:pointer" class="my-auto" (click)="toggleMenu()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [@mobileToggleMenu]=menuOn style="position:relative; width:100%; background-image: linear-gradient(to right, #3586ff, #a1c7ff);" fxShow.gt-sm="false" fxShow.lt-md="true">
+        <div *ngIf = "menuItemOn" class="container" style="height:50px">
+            <div class="row h-100">
+                <div class="menu col-md-4 text-center my-auto py-3">
+                    <span class="menu-item">Home</span>
+                </div>
+                <div class="menu2 col-md-4 text-center my-auto py-3">
+                    <span class="menu-item">Work</span>
+                </div>
+                <div class="menu col-md-4 text-center my-auto py-3">
+                    <span class="menu-item">Blog</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [@webToggleMenu]=menuOn style="position:relative; width:100%; background-image: linear-gradient(to right, #3586ff, #a1c7ff);" fxShow.lt-md="false" fxShow.gt-sm="true">
+        <div *ngIf="menuItemOn" class="container" style="height:50px">
+            <div class="row h-100">
+                <div class="menu col-md text-center my-auto py-3">
+                    <span class="menu-item" (click)="navigateTo('')">Home</span>
+                </div>
+                <div class="menu2 col-md text-center my-auto py-3">
+                    <span class="menu-item" (click)="navigateTo('work')">Work</span>
+                </div>
+                <div class="menu col-md text-center my-auto py-3">
+                    <span class="menu-item" (click)="navigateTo('blog')">Blog</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wave-area">
+        <div class="wave wave-animate1"></div>
+    </div>
+</div>

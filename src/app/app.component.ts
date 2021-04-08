@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'rhosung-website';
+  title = 'rhosung-park';
+
+  scrollTop(){
+    window.scrollTo(0,0);
+  }
 }

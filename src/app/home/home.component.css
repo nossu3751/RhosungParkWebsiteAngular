@@ -1,0 +1,23 @@
+@keyframes click-me-animation{
+    0%, 100%{
+        opacity: 1;
+        transform:scale(1);
+    }
+    50%{
+        opacity: 0.6;
+        transform:scale(1.03);
+    }
+}
+.face{
+    cursor:pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.face:hover{
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}
+
+.clickMe{
+    animation: click-me-animation 1.5s ease-in-out infinite;
+}
