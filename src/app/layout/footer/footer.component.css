@@ -30,6 +30,22 @@
     height: 100%;
 }
 
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000030;
+    opacity: 0.3; /* Firefox */
+    font-family: Bungee;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000030;
+    font-family: Bungee;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000030;
+    font-family: Bungee;
+}
+
 @keyframes animate-reverse{
     0%{
         background-position-x: 0px;
