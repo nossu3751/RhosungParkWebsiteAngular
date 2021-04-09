@@ -3,8 +3,37 @@
         <div class="wave wave-animate1"></div>
     </div>
     <div class="footer">
-        <div class="container h-100" style="display:flex; align-items: center; ">   
-            
+        <div class="container h-100 py-3">
+            <form class="w-100" [formGroup]="contactForm" (ngSubmit)="contactForm.valid">
+                <div class="form-group d-flex justify-content-center mb-3"
+                    style="font-family: Bungee; color:#323c57; font-size: xx-large;">
+                    Send Me A Message!
+                </div>
+                <div class="form-group d-flex justify-content-center"
+                    style="font-family: Bungee; color:rgb(190, 211, 235)">
+                    Name
+                </div>
+                <div class="form-group">
+                    <input class="form-control w-100" formControlName="name"
+                        style="border-radius: 15px; background-color:rgb(112, 139, 189) ; border:none" />
+                </div>
+                <div class="form-group d-flex justify-content-center"
+                    style="font-family: Bungee; color:rgb(190, 211, 235)">
+                    Email
+                </div>
+                <div class="form-group">
+                    <input class="form-control w-100" formControlName="email"
+                        style="border-radius: 15px; background-color:rgb(112, 139, 189) ; border:none" />
+                </div>
+                <div class="form-group d-flex justify-content-center"
+                    style="font-family: Bungee; color:rgb(190, 211, 235)">
+                    Message
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control w-100" formControlName="message"
+                        style="border-radius: 15px; background-color:rgb(112, 139, 189) ; border:none; min-height:100px; max-height: 150px;"></textarea>
+                </div>
+            </form>
         </div>
     </div>
 </div>

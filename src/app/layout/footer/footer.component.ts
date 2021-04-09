@@ -11,8 +11,8 @@ export class FooterComponent implements OnInit {
   constructor(private formBuilder:FormBuilder) { 
     this.contactForm = formBuilder.group({
       name:['',[Validators.required]],
-      email: ['', [Validators.email]],
-      query: ['',[Validators.required]]
+      email: ['', [Validators.email, Validators.required]],
+      message: ['',[Validators.required]]
     })
   }
 
