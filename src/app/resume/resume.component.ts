@@ -10,6 +10,7 @@ import { SharedService } from '../shared.service';
 export class ResumeComponent implements OnInit {
   pdf:string = "../../assets/Rhosung_Park_Resume.pdf";
   show:BehaviorSubject<boolean> = this._sharedService.resumeOn;
+  faceImg:string = '../../assets/images/black_rho.png';
   constructor(private _sharedService:SharedService) { }
 
   close(){

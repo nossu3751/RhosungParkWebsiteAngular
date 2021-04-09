@@ -4,4 +4,33 @@
     <div id="pdfClose" (click)="close()">
         <i class="fas fa-times"></i>
     </div>
+    <div class="position-absolute w-100 d-flex justify-content-center" style="align-items: flex-start;">
+        <img [src]="faceImg" width="200" style="z-index:10003; margin-top:70px; height:auto" fxShow.gt-sm="true" fxShow.lt-md="false"/>
+        <img [src]="faceImg" width="120" style="z-index:10003; margin-top:50px; height:auto" fxShow.gt-sm="false" fxShow.lt-md="true"/>
+    </div>
+    <div class="container mb-3 py-5" style="margin-top:180px" fxShow.gt-sm="true" fxShow.lt-md="false">
+        <div class="card" style="border-radius:20px">
+            <div class="card-body">
+                <pdf-viewer [src]="pdf" [original-size]="false" style="border-radius: 15px; z-index:10002;">
+
+                </pdf-viewer>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3 py-5" style="margin-top:100px" fxShow.gt-sm="false" fxShow.lt-md="true">
+        <div class="card" style="border-radius:20px">
+            <div class="card-body">
+                <pdf-viewer [src]="pdf" [original-size]="false" style="border-radius: 15px; z-index:10002;">
+
+                </pdf-viewer>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <a href="{{pdf}}" style="text-decoration: none; color:white; ">
+            <button class="btn btn-block btn-secondary" style="border-radius:500px; font-weight: bolder;"> 
+                Print <i class="fas fa-print"></i>
+            </button>
+        </a>
+    </div>
 </div>

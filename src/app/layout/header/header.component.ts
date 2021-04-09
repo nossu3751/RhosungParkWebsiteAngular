@@ -37,12 +37,14 @@ export class HeaderComponent implements OnInit {
   constructor(private router:Router) { 
     this.logoUrl = "../../assets/images/rhosung-logo-thinner.png";
     this.hamburgerUrl = "../../assets/images/hamburger.png";
-    this.menuOn = 'closed'
+    this.menuOn = 'closed';
     this.menuItemOn = false;
   }
 
   navigateTo(path:string){
     this.router.navigate([path]);
+    this.menuItemOn = false;
+    this.menuOn = 'closed';
   }
 
   toggleMenu(){

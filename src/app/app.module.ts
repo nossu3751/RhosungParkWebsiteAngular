@@ -14,11 +14,14 @@ import { BlogComponent } from './blog/blog.component';
 import { AdminComponent } from './admin/admin.component';
 import { ResumeComponent } from './resume/resume.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { FooterComponent } from './layout/footer/footer.component';
+import { ErrorComponent } from './error/error.component';
 
 const ROUTES: Routes = [
   {path:'', component:HomeComponent},
   {path:'work', component: WorkComponent},
-  {path:'blog', component: BlogComponent}
+  {path:'blog', component: BlogComponent},
+  {path:'**', component: ErrorComponent}
 ]
 
 @NgModule({
@@ -30,6 +33,8 @@ const ROUTES: Routes = [
     BlogComponent,
     AdminComponent,
     ResumeComponent,
+    FooterComponent,
+    ErrorComponent,
   
   ],
   imports: [
