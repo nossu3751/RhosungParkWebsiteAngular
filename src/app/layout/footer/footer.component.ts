@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailService } from 'src/app/services/email.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,12 +9,36 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FooterComponent implements OnInit {
   contactForm:FormGroup;
-  constructor(private formBuilder:FormBuilder) { 
+  errorMsg:string = "";
+  constructor(private formBuilder:FormBuilder, private _emailService:EmailService) { 
     this.contactForm = formBuilder.group({
       name:['',[Validators.required]],
       email: ['', [Validators.email, Validators.required]],
       message: ['',[Validators.required]]
     })
+  }
+
+  sendEmail(){
+    if(this.contactForm.invalid){
+      alert("Form Invalid!");
+    }else{
+      console.log(this.contactForm.get('name')?.value);
+      console.log(this.contactForm.get('email')?.value);
+      console.log(this.contactForm.get('message')?.value);
+      let email = {
+        name: this.contactForm.get('name')?.value,
+        email: this.contactForm.get('email')?.value,
+        query: this.contactForm.get('message')?.value
+      }
+      this._emailService.sendEmail(email).then(resolve => {
+        if(resolve == null){
+          alert("Couldn't send email!");
+        }else{
+          alert(resolve.message);
+          this.contactForm.setValue({name:"", email:"", message:""});
+        }
+      })
+    }
   }
 
   ngOnInit(): void {
