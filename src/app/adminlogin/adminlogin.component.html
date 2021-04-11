@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center align-items-center my-5">
+    <form [formGroup]="loginInfo" (ngSubmit)="loginInfo.valid && login()">
+        <div class="form-group">
+            <input formControlName="id" class="form-control" placeholder="ID"/>
+        </div>
+        <div class="form-group">
+            <input formControlName="password" class="form-control" placeholder="PASSWORD"/>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-block btn-outline-dark">
+                Login
+            </button>
+        </div>
+    </form>
+</div>

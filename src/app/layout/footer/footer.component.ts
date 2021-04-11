@@ -10,6 +10,7 @@ import { EmailService } from 'src/app/services/email.service';
 export class FooterComponent implements OnInit {
   contactForm:FormGroup;
   errorMsg:string = "";
+  submitted:boolean = false;
   constructor(private formBuilder:FormBuilder, private _emailService:EmailService) { 
     this.contactForm = formBuilder.group({
       name:['',[Validators.required]],
@@ -19,6 +20,7 @@ export class FooterComponent implements OnInit {
   }
 
   sendEmail(){
+    this.submitted =true;
     if(this.contactForm.invalid){
       alert("Form Invalid!");
     }else{
@@ -36,6 +38,7 @@ export class FooterComponent implements OnInit {
         }else{
           alert(resolve.message);
           this.contactForm.setValue({name:"", email:"", message:""});
+          this.submitted = false;
         }
       })
     }

@@ -18,6 +18,10 @@
                         style="border-radius: 15px; background-color:rgb(112, 139, 189) ; border:none; font-family:Bungee; color:white"
                         placeholder="Your Name" />
                 </div>
+                <div *ngIf="(contactForm.invalid && submitted) || contactForm.get('name')?.touched" class="form-group d-flex justify-content-center"
+                    style="font-family: Bungee; color:rgb(218, 142, 161)">
+                    <small> Please let me know your name!</small>
+                </div>
                 <div class="form-group d-flex justify-content-center"
                     style="font-family: Bungee; color:rgb(190, 211, 235)">
                     Email
@@ -26,6 +30,10 @@
                     <input class="form-control w-100" formControlName="email"
                         style="border-radius: 15px; background-color:rgb(112, 139, 189) ; border:none; font-family:Bungee; color:white"
                         placeholder="Your Email" />
+                </div>
+                <div *ngIf="(contactForm.invalid && submitted) || contactForm.get('email')?.touched" class="form-group d-flex justify-content-center"
+                    style="font-family: Bungee; color:rgb(218, 142, 161)">
+                    <small> Please let me know your email!</small>
                 </div>
                 <div class="form-group d-flex justify-content-center"
                     style="font-family: Bungee; color:rgb(190, 211, 235)">
@@ -36,6 +44,10 @@
                         style="border-radius: 15px; background-color:rgb(112, 139, 189) ; border:none; min-height:100px; max-height: 150px; font-family:Bungee; color:white"
                         placeholder="What You Want To Tell Me">
                     </textarea>
+                </div>
+                <div *ngIf="(contactForm.invalid && submitted) || contactForm.get('message')?.touched" class="form-group d-flex justify-content-center"
+                    style="font-family: Bungee; color:rgb(218, 142, 161)">
+                    <small> Please let me know your message!</small>
                 </div>
                 <div class="form-group my-5">
                     <button class="btn btn-block btn-outline-light" style="font-family: Bungee; border-radius: 15px;">

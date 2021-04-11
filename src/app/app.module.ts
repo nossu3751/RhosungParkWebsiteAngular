@@ -16,11 +16,14 @@ import { ResumeComponent } from './resume/resume.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ErrorComponent } from './error/error.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 const ROUTES: Routes = [
   {path:'', component:HomeComponent},
   {path:'work', component: WorkComponent},
   {path:'blog', component: BlogComponent},
+  {path:'admin', component: AdminComponent},
+  {path:'admin/login', component: AdminloginComponent},
   {path:'**', component: ErrorComponent}
 ]
 
@@ -35,6 +38,7 @@ const ROUTES: Routes = [
     ResumeComponent,
     FooterComponent,
     ErrorComponent,
+    AdminloginComponent,
   
   ],
   imports: [
