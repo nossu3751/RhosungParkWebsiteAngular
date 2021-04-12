@@ -1,0 +1,82 @@
+.wave-area{
+    position:relative;
+    width: 100%;
+    height: 7vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+.wave-area .wave1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7.5vh;
+    background: url(../../assets/images/wave1.png);
+    background-size: 1000px 100%;
+}
+
+.wave-area .wave1.wave-animate1{
+    animation: animate-reverse 15s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wave-area .wave2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.5vh;
+    background: url(../../assets/images/wave-header.png);
+    background-size: 1000px 100%;
+}
+
+.wave-area .wave2.wave-animate2{
+    animation: animate 15s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.skills{
+    position:relative;
+    width:100%;
+    background-color:#3c5caf;
+}
+
+.skill-card.card{
+    box-shadow:none;
+    border: solid 4px white;
+    background-color: transparent;
+    border-radius: 25px;
+    height: 300px;
+}
+
+.card{
+    border:none;
+    box-shadow: 0 3.5px 3px rgba(0,0,0,0.2);
+}
+
+@keyframes animate-reverse{
+    0%{
+        background-position-x: 0px;
+    }
+
+    100%{
+        background-position-x: -1000px;
+    }
+}
+
+@keyframes animate{
+    0%{
+        background-position-x: 0px;
+    }
+
+    100%{
+        background-position-x: 1000px;
+    }
+}

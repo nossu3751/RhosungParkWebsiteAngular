@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class AdminloginComponent implements OnInit {
   loginInfo:FormGroup;
-  constructor(private formBuilder:FormBuilder, private _authService:AuthService) { 
+  constructor(private formBuilder:FormBuilder, private _authService:AuthService, private router:Router) { 
     this.loginInfo = formBuilder.group({
       id:['', [Validators.required]],
       password:['',[Validators.required]]
@@ -25,6 +26,7 @@ export class AdminloginComponent implements OnInit {
     this._authService.authenticate(credentials).then(resolve =>{
       if(resolve == true){
         console.log("logged in!");
+        this.router.navigate(['/admin']);
       }else{
         console.log("Failed!");
       }
@@ -33,6 +35,10 @@ export class AdminloginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    let isAdmin:boolean = this._authService.isAdmin();
+    if(isAdmin){
+      this.router.navigate(['/admin']);
+    }
   }
 
 }
