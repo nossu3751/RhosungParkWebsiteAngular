@@ -8,6 +8,7 @@ import { ProjectService } from '../services/project.service';
 })
 export class WorkComponent implements OnInit {
   projects:any[] = [];
+  testArray:any[] = [1,2,3];
   faceImg:string = '../../assets/images/black_rho.png';
   icons = {
     language:'../../assets/images/icon_coding.png',
@@ -17,10 +18,6 @@ export class WorkComponent implements OnInit {
   }
 
   constructor(private _projectService:ProjectService) { }
-
-  openTab(url:string){
-    window.open(url);
-  }
 
   ngOnInit(): void {
     this._projectService.getAllProjects().subscribe(

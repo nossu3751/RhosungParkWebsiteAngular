@@ -1,149 +1,133 @@
-<div class="container my-4 position-relative">
-    <div class="row">
-        <div class="col-12 col-md-3 mb-5 d-flex justify-content-center align-items-center">
-            <img [src]="faceImg" height="250px" fxShow.lt-md="false" fxShow.gt-sm="true" />
-            <img [src]="faceImg" height="200px" fxShow.lt-md="true" fxShow.gt-sm="false" />
-        </div>
-        <div class="col-12 col-md-9 px-5 d-flex text-left align-items-center justify-content-center"
-            style="font-family: Quicksand;">
-            <div class="w-100 text-left" fxShow.lt-md="false" fxShow.gt-sm="true">I graduated <span style="color:#3c5caf; font-weight: bold;">Brandeis University</span> with
-                Bachelor's degree in Computer Science and Psychology. Currently, I work at <span style="color:#3c5caf; font-weight: bold;">Tata Consultancy Services</span> as
-                a Software Engineer. I specialize in programming in Java, but I also love to develop web apps using
-                JavaScript. My primary goal is to become a better full stack engineer through persistent learning.
+<div class="work-page position-relative">
+
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+                <img [src]="faceImg" height="250px" fxShow.lt-md="false" fxShow.gt-sm="true" />
+                <img class="mb-3"[src]="faceImg" height="200px" fxShow.lt-md="true" fxShow.gt-sm="false" />
             </div>
-            <div class="w-100 text-center" fxShow.lt-md="true" fxShow.gt-sm="false">I graduated <span style="color:#3c5caf; font-weight: bold;">Brandeis University</span> with
-                Bachelor's degree in Computer Science and Psychology. Currently, I work at <span style="color:#3c5caf; font-weight: bold;">Tata Consultancy Services</span> as
-                a Software Engineer. I specialize in programming in Java, but I also love to develop web apps using
-                JavaScript. My primary goal is to become a better full stack engineer through persistent learning.
+            <div class="col-12 col-md-9 px-5 d-flex text-left align-items-center justify-content-center"
+                style="font-family: Quicksand;">
+                <div class="w-100 text-left" fxShow.lt-md="false" fxShow.gt-sm="true">I graduated <span style="color:#3c5caf; font-weight: bold;">Brandeis University</span> with
+                    Bachelor's degree in Computer Science and Psychology. Currently, I work at <span style="color:#3c5caf; font-weight: bold;">Tata Consultancy Services</span> as
+                    a Software Engineer. I specialize in programming in Java, but I also love to develop web apps using
+                    JavaScript. My primary goal is to become a better full stack engineer through persistent learning.
+                </div>
+                <div class="w-100 text-center" fxShow.lt-md="true" fxShow.gt-sm="false">I graduated <span style="color:#3c5caf; font-weight: bold;">Brandeis University</span> with
+                    Bachelor's degree in Computer Science and Psychology. Currently, I work at <span style="color:#3c5caf; font-weight: bold;">Tata Consultancy Services</span> as
+                    a Software Engineer. I specialize in programming in Java, but I also love to develop web apps using
+                    JavaScript. My primary goal is to become a better full stack engineer through persistent learning.
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
-<div class="skills">
-    <div class="wave-area position-relative">
-        <div class="wave1 wave-animate1"></div>
-    </div>
-
-    <div class="skill-body w-100 position-relative" style="background-color:transparent;">
-        
-        <div class="container mt-3 mb-5">
-            <div class="row mt-3 mb-5 justify-content-center" style="font-family: Bungee; color:white">
-                <h3>Skills</h3>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card skill-card">
-                        <div class="card-body">
-                            <div class="container">
-                                <div class="row justify-content-center my-3">
-                                    <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Language</h5>
-                                </div>
-                                <div class="row justify-content-center align-items-center mb-5">
-                                    <img [src]="icons.language" height="60px">
-                                </div>
-                                <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
-                                    <p>Java, Ruby, Python, Dart, JavaScript, HTML, CSS, SQL</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card skill-card">
-                        <div class="card-body">
-                            <div class="container">
-                                <div class="row justify-content-center my-3">
-                                    <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Development</h5>
-                                </div>
-                                <div class="row justify-content-center align-items-center mb-5">
-                                    <img [src]="icons.development" height="60px">
-                                </div>
-                                <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
-                                    <p>Linux, React.js, Redux, Bootstrap, Ruby on Rails, Node.js, PostgreSQL, Heroku, Flutter, Firebase</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card skill-card">
-                        <div class="card-body">
-                            <div class="container">
-                                <div class="row justify-content-center my-3">
-                                    <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Data Science</h5>
-                                </div>
-                                <div class="row justify-content-center align-items-center mb-5">
-                                    <img [src]="icons.data_science" height="60px">
-                                </div>
-                                <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
-                                    <p>SAS, Anaconda, Stata, SPSS, Panda</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card skill-card">
-                        <div class="card-body">
-                            <div class="container">
-                                <div class="row justify-content-center my-3">
-                                    <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Digital Art</h5>
-                                </div>
-                                <div class="row justify-content-center align-items-center mb-5">
-                                    <img [src]="icons.digital_art" height="60px">
-                                </div>
-                                <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
-                                    <p>Blender, Cinema 4D, Photoshop (Adobe Certificate), Illustrator (Adobe Certificate), Premiere Pro, After Effects, Lightroom, Adobe XD</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div style="position:relative; height: 7.5vh; width: 100%"></div>
-        <div class="wave-area" style="position:absolute; bottom:0; left:0; height: 7.5vh; background-color: transparent;">
-            <div class="wave2 wave-animate2"></div>
-        </div>
-    </div>   
     
-</div>
-
-<div class="projects position-relative">
-    <div class="container mt-3 d-flex justify-content-center">
-        <h3 style="font-family: Bungee; color:#274080"> Recent Works</h3>
-    </div>
-    <div class="container my-5">
-        <div class="card-columns">
-            <div class="card" *ngFor="let p of projects" style="border-radius: 25px 25px 25px 25px; ">
-                <img class="card-img-top"[src]="p?.image" height="150px" width="100%" style="border-radius: 25px 25px 0 0"/>
-                <div class="card-body mt-3 text-center" style="font-family: Bungee; color:#323c57">
-                    <h5>{{p?.title}}</h5>
+    
+    <div class="skills">
+        <div class="wave-area position-relative">
+            <div class="wave1 wave-animate1"></div>
+        </div>
+    
+        <div class="skill-body w-100 position-relative" style="background-color:transparent;">
+            
+            <div class="container mt-3 mb-5">
+                <div class="row mt-3 mb-5 justify-content-center" style="font-family: Bungee; color:white">
+                    <h3>Skills</h3>
                 </div>
-                <div class="card-body d-flex text-center align-items-center" style="height:8rem; font-family: Quicksand;">
-                    {{p?.description}}
-                </div>
-                <div class="card-body d-flex justify-content-center">
-                    <div style="width:fit-content">
-                        <div *ngIf="p?.siteLink !== ''" class="btn btn-outline-primary mr-2" style="font-family: Bungee;" (click)="openTab(p?.siteLink)">
-                            Open App
-                        </div>
-                        <div *ngIf="p?.repoLink !== ''" class="btn btn-outline-secondary" style="font-family: Bungee;" (click)="openTab(p?.repoLink)">
-                            Visit Repo
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row justify-content-center my-3">
+                                        <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Language</h5>
+                                    </div>
+                                    <div class="row justify-content-center align-items-center mb-5">
+                                        <img [src]="icons.language" height="60px">
+                                    </div>
+                                    <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
+                                        <p>Java, Ruby, Python, Dart, JavaScript, HTML, CSS, SQL</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row justify-content-center my-3">
+                                        <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Development</h5>
+                                    </div>
+                                    <div class="row justify-content-center align-items-center mb-5">
+                                        <img [src]="icons.development" height="60px">
+                                    </div>
+                                    <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
+                                        <p>Linux, React.js, Redux, Bootstrap, Ruby on Rails, Node.js, PostgreSQL, Heroku, Flutter, Firebase, Angular, JDBC, Oracle DB, Apache Tomcat</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row justify-content-center my-3">
+                                        <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Data Science</h5>
+                                    </div>
+                                    <div class="row justify-content-center align-items-center mb-5">
+                                        <img [src]="icons.data_science" height="60px">
+                                    </div>
+                                    <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
+                                        <p>SAS, Anaconda, Stata, SPSS, Panda</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row justify-content-center my-3">
+                                        <h5 style="font-family: Bungee;color:rgb(166, 207, 255);">Digital Art</h5>
+                                    </div>
+                                    <div class="row justify-content-center align-items-center mb-5">
+                                        <img [src]="icons.digital_art" height="60px">
+                                    </div>
+                                    <div class="row justify-content-center text-center align-items-center mb-3" style="font-family: Quicksand; color:white">
+                                        <p>Blender, Cinema 4D, Photoshop (Adobe Certificate), Illustrator (Adobe Certificate), Premiere Pro, After Effects, Lightroom, Adobe XD</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <div style="position:relative; height: 7.5vh; width: 100%"></div>
+            <div class="wave-area" style="position:absolute; bottom:0; left:0; height: 7.5vh; background-color: transparent;">
+                <div class="wave2 wave-animate2"></div>
+            </div>
+        </div>   
+        
+    </div>
+    
+    <div class="projects position-relative">
+        <div class="container mt-3 d-flex justify-content-center">
+            <h3 style="font-family: Bungee; color:#274080"> Recent Works</h3>
+        </div>
+        <div class="container my-5">
+            <app-work-display-cards [projectData]="projects"></app-work-display-cards>
         </div>
     </div>
+
 </div>
+
+
 
 
 

@@ -17,6 +17,10 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { WorkDisplayCardsComponent } from './work-display-cards/work-display-cards.component';
+import { BlogEditorComponent } from './blog-editor/blog-editor.component';
+import { NgxEditorModule } from 'ngx-editor';
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 const ROUTES: Routes = [
   {path:'', component:HomeComponent},
@@ -39,10 +43,13 @@ const ROUTES: Routes = [
     FooterComponent,
     ErrorComponent,
     AdminloginComponent,
+    WorkDisplayCardsComponent,
+    BlogEditorComponent,
   
   ],
   imports: [
     BrowserModule,
+    NgxEditorModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -50,7 +57,8 @@ const ROUTES: Routes = [
     BrowserAnimationsModule,
     FlexLayoutModule,
     PdfViewerModule,
-    HttpClientModule
+    HttpClientModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
