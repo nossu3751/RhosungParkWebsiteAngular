@@ -1,11 +1,49 @@
-<div class="container my-5">
-    <div class="container px-5">
-        <div class="row justify-content-center"  *ngFor="let p of posts">
-            {{p.title}}
-            {{p.category}}
-            {{p.createdAt | date:'short'}}
-            <div class="container post-content d-flex justify-content-center" [innerHtml]="p.content"></div>
-        </div>
+<div class="container my-5 ">
+    <div class="container px-5 d-flex justify-content-center mb-3">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let p of posts | paginate : {
+                    itemsPerPage: tableSize,
+                    currentPage: page,
+                    totalItems: count
+                }; let i = index">
+                    <td (click)="goToPost(p._id)" style="font-family: Quicksand; color:rgb(112, 139, 189);">{{p.title}}</td>
+                </tr>
+            </tbody>
+        </table>
         
+    </div>
+
+    <div class="container d-flex justify-content-center mb5">
+        <pagination-controls 
+            
+            previousLable=""
+            nextLable=""
+            (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+    </div>
+    
+    <div class="container px-5">
+        <div class="row"  *ngFor="let p of posts">
+            <div class="col-12 ">
+                <div class="card my-5" style="border-radius: 25px;">
+                    <div class="card-body">
+                        <div class="container my-3 d-flex justify-content-center" style="font-family: Bungee; color:rgb(112, 139, 189) ">
+                            <h4>{{p.title}}</h4>
+                        </div>
+                        <div class="container mb-5 d-flex justify-content-center" style="font-family:Quicksand; color: #000030;">
+                            {{p.category === ""? "General":p.category}} | {{p.createdAt | date:'short'}}
+                        </div>
+                        <div class="container mb-3 content-area text-center" [innerHtml]="p.content"></div>
+                        <div (click)="copyUrl(absoluteUrl,p._id)" class="copy-link container mb-3 px-5" fxShow.lt-md="false" fxShow.gt-sm="true">
+                            {{absoluteUrl}}/{{p._id}}   <i class="far fa-copy ml-3" ></i>
+                        </div>
+                        <div (click)="copyUrl(absoluteUrl,p._id)" class="copy-link container mb-3 px-5" fxShow.lt-md="true" fxShow.gt-sm="false">
+                            Copy Link!   <i class="far fa-copy ml-3" ></i>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
     </div>
 </div>

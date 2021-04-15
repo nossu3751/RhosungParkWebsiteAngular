@@ -1,0 +1,25 @@
+<div class="container my-5">
+    <div class="container px-5">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="card my-5" style="border-radius: 25px;">
+                    <div class="card-body" *ngIf="post | async as p">
+                        <div class="container my-3 d-flex justify-content-center" style="font-family: Bungee; color:rgb(112, 139, 189) ">
+                            <h4>{{p.title}}</h4>
+                        </div>
+                        <div class="container mb-5 d-flex justify-content-center" style="font-family:Quicksand; color: #000030;">
+                            {{p.category === ""? "General":p.category}} | {{p.createdAt | date:'short'}}
+                        </div>
+                        <div class="container mb-3 content-area text-center" [innerHtml]="p.content"></div>
+                        <div (click)="copyUrl(absoluteUrl)" class="copy-link container mb-3 px-5" fxShow.lt-md="false" fxShow.gt-sm="true">
+                            {{absoluteUrl}}  <i class="far fa-copy ml-3" ></i>
+                        </div>
+                        <div (click)="copyUrl(absoluteUrl)" class="copy-link container mb-3 px-5" fxShow.lt-md="true" fxShow.gt-sm="false">
+                            Copy Link!   <i class="far fa-copy ml-3" ></i>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>

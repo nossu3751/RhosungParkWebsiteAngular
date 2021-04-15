@@ -1,0 +1,32 @@
+.content-area > img {
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-area{
+    font-family: Quicksand;
+}
+
+.copy-link{
+    height:2rem; 
+    border: solid 1px rgb(180, 198, 230); 
+    color:rgb(180, 198, 230); 
+    border-radius:1000px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-family: Quicksand;
+    font-size: small;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-link:hover{
+    border: solid 1px rgb(227, 242, 255);
+    background-color: rgb(180, 198, 230);
+    color:white;
+    transition: all 0.2s ease-in-out
+}

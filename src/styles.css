@@ -3,3 +3,9 @@ body{
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
+
+.sentence{
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+}

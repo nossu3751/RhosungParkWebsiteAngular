@@ -30,6 +30,7 @@
     "ng2-pdf-viewer": "^6.4.1",
     "ngx-bootstrap": "^6.2.0",
     "ngx-editor": "^8.1.1",
+    "ngx-pagination": "^5.0.0",
     "nodemon": "^2.0.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -31,6 +31,10 @@ export class PostService {
     return this.http.get(this.endPoint);
   }
 
+  getOnePost(postId:string):Observable<any>{
+    return this.http.get(`${this.endPoint}/${postId}`);
+  }
+
 
 
 }

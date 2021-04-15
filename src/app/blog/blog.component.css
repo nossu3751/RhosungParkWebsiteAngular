@@ -1,9 +1,68 @@
-.post-content img{
-    width:100%;
-    padding-left: 30px;
-    padding-right: 30px;
+
+.content-area > img {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.post-content{
+.content-area > div {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+@media only screen and (max-device-width : 768px) {
+    .content-area > img {
+        width: 100%;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .content-area > div {
+        width: 100%;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+.content-area{
     font-family: Quicksand;
+}
+
+.copy-link{
+    height:2rem; 
+    border: solid 1px rgb(180, 198, 230); 
+    color:rgb(180, 198, 230); 
+    border-radius:1000px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-family: Quicksand;
+    font-size: small;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-link:hover{
+    border: solid 1px rgb(227, 242, 255);
+    background-color: rgb(180, 198, 230);
+    color:white;
+    transition: all 0.2s ease-in-out
+}
+
+.ngx-pagination{
+    padding-left: 0px !important;
+}
+
+li.ng-star-inserted{
+    font-family: Quicksand;
+}
+
+li.current.ng-star-inserted{
+    border-radius:15px;
+    background-color:rgb(112, 139, 189);
 }

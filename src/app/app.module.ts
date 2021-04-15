@@ -21,11 +21,16 @@ import { WorkDisplayCardsComponent } from './work-display-cards/work-display-car
 import { BlogEditorComponent } from './blog-editor/blog-editor.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { YouTubePlayerModule } from "@angular/youtube-player";
+import {ClipboardModule} from '@angular/cdk/clipboard';
+import { BlogPostComponent } from './blog-post/blog-post.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 const ROUTES: Routes = [
   {path:'', component:HomeComponent},
   {path:'work', component: WorkComponent},
   {path:'blog', component: BlogComponent},
+  {path:'blog/:id', component: BlogPostComponent},
   {path:'admin', component: AdminComponent},
   {path:'admin/login', component: AdminloginComponent},
   {path:'**', component: ErrorComponent}
@@ -45,6 +50,7 @@ const ROUTES: Routes = [
     AdminloginComponent,
     WorkDisplayCardsComponent,
     BlogEditorComponent,
+    BlogPostComponent,
   
   ],
   imports: [
@@ -58,7 +64,9 @@ const ROUTES: Routes = [
     FlexLayoutModule,
     PdfViewerModule,
     HttpClientModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    ClipboardModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
