@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PostService {
-  endPoint = "http://localhost:3000/posts"
+  endPoint = "https://rhosung-park-backend.herokuapp.com/posts"
   constructor(private http:HttpClient) { }
 
   createPost(post:any):Promise<any>{

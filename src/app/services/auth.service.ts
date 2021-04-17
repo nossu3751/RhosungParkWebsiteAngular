@@ -6,7 +6,7 @@ import * as bcrypt from 'bcryptjs';
   providedIn: 'root'
 })
 export class AuthService {
-  endPoint:string = "http://localhost:3000/login"
+  endPoint:string = "https://rhosung-park-backend.herokuapp.com/login"
   constructor(private http:HttpClient) { }
 
   isAdmin():boolean{

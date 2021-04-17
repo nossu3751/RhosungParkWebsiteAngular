@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EmailService {
-  endPoint = "http://localhost:3000/send";
+  endPoint = "https://rhosung-park-backend.herokuapp.com/send";
   constructor(private http:HttpClient) { 
 
   }

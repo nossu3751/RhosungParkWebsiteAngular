@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProjectService {
-  endPoint:string = "http://localhost:3000/project"
+  endPoint:string = "https://rhosung-park-backend.herokuapp.com/project"
   constructor(private http:HttpClient) { }
 
   getAllProjects():Observable<any>{
