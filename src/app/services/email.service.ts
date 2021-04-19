@@ -11,16 +11,16 @@ export class EmailService {
   }
 
   sendEmail(email:any):Promise<any>{
-    console.log(email);
+    // console.log(email);
     return new Promise<any>( resolve =>{
       this.http.post(this.endPoint, email).subscribe(
         data => {
-          console.log(data,"Successfully sent email!");
+          // console.log(data,"Successfully sent email!");
           resolve(data);
         },
         error => {
           resolve(null);
-          console.log(error,"Failed to send email!");
+          // console.log(error,"Failed to send email!");
         }
       )
     })

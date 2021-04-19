@@ -22,7 +22,7 @@ export class WorkComponent implements OnInit {
   ngOnInit(): void {
     this._projectService.getAllProjects().subscribe(
       data=>{
-        console.log(data);
+        // console.log(data);
         this.projects = data.data;
       }
     )

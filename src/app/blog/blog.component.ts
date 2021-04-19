@@ -37,7 +37,7 @@ export class BlogComponent implements OnInit {
   fetchPosts(){
     this._postService.getPost().subscribe(
       (data:any)=>{
-        console.log(data.data);
+        // console.log(data.data);
         this.posts = data.data;
       }
     )
@@ -48,7 +48,7 @@ export class BlogComponent implements OnInit {
   }
 
   onTableDataChange(event:any):void{
-    console.log(event);
+    // console.log(event);
     this.page = event;
     this.fetchPosts();
   }

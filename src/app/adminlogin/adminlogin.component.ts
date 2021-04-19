@@ -25,10 +25,10 @@ export class AdminloginComponent implements OnInit {
 
     this._authService.authenticate(credentials).then(resolve =>{
       if(resolve == true){
-        console.log("logged in!");
+        // console.log("logged in!");
         this.router.navigate(['/admin']);
       }else{
-        console.log("Failed!");
+        // console.log("Failed!");
       }
     })
     

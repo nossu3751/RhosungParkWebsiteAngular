@@ -24,9 +24,9 @@ export class FooterComponent implements OnInit {
     if(this.contactForm.invalid){
       alert("Form Invalid!");
     }else{
-      console.log(this.contactForm.get('name')?.value);
-      console.log(this.contactForm.get('email')?.value);
-      console.log(this.contactForm.get('message')?.value);
+      // console.log(this.contactForm.get('name')?.value);
+      // console.log(this.contactForm.get('email')?.value);
+      // console.log(this.contactForm.get('message')?.value);
       let email = {
         name: this.contactForm.get('name')?.value,
         email: this.contactForm.get('email')?.value,
